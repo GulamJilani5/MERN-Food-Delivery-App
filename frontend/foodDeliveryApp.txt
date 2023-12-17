@@ -1,0 +1,49 @@
+# Github code Link for the project
+  https://github.com/arshdeepsingh2267/Gofood/tree/main
+
+# Extensions
+  1. prettier
+  2. auto rename
+  3. javascript es6
+  4. es7 + react/redux/
+  5. vscode icons
+
+# create project
+  npx creat-react-app food-delivery-app  (I write it inside desktop, we can open any folder in vs code and go to desktop by cd.. command)
+  npm start
+
+
+
+# Third party library
+
+ bootstrap 5 dark react -> go to vinodrodrigue github -> bootstrap dark -> quick guide 
+ copy     <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css" rel="stylesheet">
+and paste inside index.html   
+
+
+npm install bootstrap bootstrap-dark-5 react-bootstrap
+
+We should add some modules from from node module into app.js file
+
+# inside .gitingore
+  /node_modules remove slash(/)
+
+# express validator
+  I have used code version 6.14
+
+# using cors middleware
+   npm install cors
+   It is use for setting cross browser setting
+
+# Used Material UI
+  npm install @mui/material @emotion/react @emotion/styled
+
+
+  //After first commit we should do these steps to push into github
+git init
+git add .
+git commit -m "after first commit"
+git push -u origin main
+  
+
+
