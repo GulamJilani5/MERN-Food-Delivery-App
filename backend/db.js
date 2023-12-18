@@ -1,8 +1,6 @@
-const mongoose = require("mongoose");
-
-require("dotenv").config();
-
-const DbURI = process.env.DB_CONNECTION_STRING;
+// const mongoose = require("mongoose");
+// require("dotenv").config();
+// const DbURI = process.env.DB_CONNECTION_STRING;
 
 ///// Method 1  -- It is not working
 // const mongoDB = async () => {
@@ -57,50 +55,41 @@ const DbURI = process.env.DB_CONNECTION_STRING;
 
 ///// Method 3
 ///// Taken this code from nextjs authentication project
-async function connectToMongoDB() {
-  // const mongoDB = async () => {
-  try {
-    // console.log("a");
-    await mongoose.connect(DbURI);
-    // console.log("b");
-    // const isConnection = mongoose.connection;
-    // // console.log("connection", isConnection);
-    // isConnection.on("connected", () => {
-    //   console.log("d");
-    //   console.log("mongoDB db connection successful!!");
-    // });
-    // isConnection.on("error", (err) => {
-    //   console.log("e");
 
-    //   console.log("MongoDB connection error!!! ", err.message);
-    //   process.exit();
-    // });
-    console.log("mongoDB db connection successful!!");
+// async function connectToMongoDB() {
+//   try {
+//     await mongoose.connect(DbURI);
+/*
+    It should remain disbaled 
+     const isConnection = mongoose.connection;
+     console.log("connection", isConnection);
+     isConnection.on("connected", () => {
+      console.log("mongoDB db connection successful!!");
+     });
+    isConnection.on("error", (err) => {
+       console.log("MongoDB connection error!!! ", err.message);
+      process.exit();
+     });
+   */
 
-    const foodItems = await mongoose.connection.db
-      .collection("fooditems")
-      .find({})
-      .toArray();
+// console.log("mongoDB db connection successful!!");
+// const foodItems = await mongoose.connection.db
+//   .collection("fooditems")
+//   .find({})
+//   .toArray();
 
-    const foodCategories = await mongoose.connection.db
-      .collection("foodcategory")
-      .find({})
-      .toArray();
-    // console.log("Food items:", foodItems);
-    // console.log("Food category:", foodCategory);
-    global.food_Data = foodItems;
-    global.food_Category = foodCategories;
-    // console.log(global.food_Data);
-    // console.log("====================================================");
-    // console.log(global.food_Category);
-  } catch (error) {
-    console.log("f");
+//     const foodCategories = await mongoose.connection.db
+//       .collection("foodcategory")
+//       .find({})
+//       .toArray();
+//     global.food_Data = foodItems;
+//     global.food_Category = foodCategories;
+//   } catch (error) {
+//     console.log("ERROR", error);
+//   }
+// }
 
-    console.log("ERROR", error);
-  }
-}
-
-module.exports = connectToMongoDB;
+// module.exports = connectToMongoDB;
 
 ///////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// CHAT GPT
